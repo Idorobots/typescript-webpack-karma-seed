@@ -20,9 +20,9 @@ const plugins = [
         path: [path.join(__dirname, 'node_modules/')]
     }]),
     new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: true,
-      },
+        compress: {
+            warnings: true,
+        },
     }),
 ];
 
@@ -34,7 +34,7 @@ module.exports = {
         filename: '[name].js',
         library: 'MyAwesomeLibrary',
         libraryTarget: 'umd',
-        umdNamedDefine: true
+        umdNamedDefine: true,
     },
 
     devtool: 'source-map',
@@ -44,7 +44,7 @@ module.exports = {
             '',
             '.ts',
             '.js',
-            '.json'
+            '.json',
         ],
     },
 

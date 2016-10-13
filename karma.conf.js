@@ -48,8 +48,9 @@ module.exports = (config) => {
         webpack: Object.assign({}, webpack, {
             output: null,
             devtool: 'inline-source-map',
-            verbose: false,
+            verbose: true,
             module: {
+                preLoaders: webpack.module.preLoaders,
                 loaders: webpack.module.loaders,
                 postLoaders: config.singleRun
                     ? [
@@ -69,6 +70,12 @@ module.exports = (config) => {
             },
             plugins: [],
             debug: true,
+            ts: {
+                compilerOptions: {
+                    sourceMap: false,
+                    inlineSourceMap: true,
+                },
+            },
         }),
 
         reporters: ['spec']

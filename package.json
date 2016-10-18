@@ -14,7 +14,8 @@
     "build": "webpack",
     "prebuild": "npm run test",
     "pretest": "npm run lint",
-    "posttest": "istanbul check-coverage --statement 90 --branch 90 --function 90"
+    "posttest": "istanbul check-coverage --statement 90 --branch 90 --function 90",
+    "clean": "rimraf dist node_modules"
   },
   "dependencies": {
     "@types/es6-shim": "^0.31.32",
@@ -38,6 +39,7 @@
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.7.0",
     "object-assign": "^4.1.0",
+    "rimraf": "^2.5.4",
     "source-map-loader": "^0.1.5",
     "source-map-support": "^0.4.0",
     "ts-helpers": "^1.1.1",
